@@ -1,11 +1,22 @@
+h1 {
+  text-align: center;
+}
+
+header {
+  height: 125px;
+  width: 700px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
 #container {
-  height: 650px;
-  width: 550px;
+  height: 625px;
+  width: 700px;
   border: 1px solid black;
   text-align: center;
   margin: 0 auto;
 }
 
-h1 {
+#search {
   text-align: center;
 }
