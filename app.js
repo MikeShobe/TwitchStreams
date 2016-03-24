@@ -7,7 +7,7 @@ xmlHttp.responseType = 'json';
 xmlHttp.onload = function() {
   if (xmlHttp.status === 200) {
     console.log(JSON.stringify(xmlHttp.response));
-    document.getElementById('test').innerHTML = xmlHttp.response;
+    // document.getElementById('streamItem').innerHTML = xmlHttp.response;
     document.getElementById('result').innerHTML = xmlHttp.response._total;
 
   }

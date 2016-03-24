@@ -1,12 +1,23 @@
-h2 {
+h1 {
   text-align: center;
 }
 
+h2 {
+  display: inline;
+  text-decoration: underline;
+}
+
 header {
-  height: 100px;
+  height: 125px;
   width: 700px;
   border: 1px solid black;
   margin: 0 auto;
+}
+
+img {
+  height: 100px;
+  width: 110px;
+  display: inline;
 }
 
 #search {
@@ -14,7 +25,7 @@ header {
 }
 
 #container {
-  height: 650px;
+  height: 625px;
   width: 700px;
   border: 1px solid black;
   text-align: center;
