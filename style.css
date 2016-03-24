@@ -21,10 +21,14 @@ header {
   margin: 0 auto;
 }
 
-#resultTab {
+#resultContainer {
   height: 20px;
   width: 700px;
   margin: 0 auto;
   text-align: left;
   padding: 5px 15px;
+}
+
+#result {
+  display: inline;
 }
