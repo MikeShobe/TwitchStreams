@@ -67,3 +67,14 @@ img {
   padding-bottom: 5px;
   margin-right: 5px;
 }
+
+#currentPage {
+  display: inline;
+  float: right;
+}
+
+#totalPages {
+  display: inline;
+  float: right;
+  padding-right: 30px;
+}
