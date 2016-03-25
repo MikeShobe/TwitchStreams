@@ -7,12 +7,15 @@ function changeQuery(){
   xmlHttp.responseType = 'json';
 
   xmlHttp.onload = function(){
-    // var streamNumber = 0;
+    var pageNumber = 1;
+    var totalPages = Math.ceil(xmlHttp.response._total / 5);
     if (xmlHttp.status === 200){
       for (var i = 0; i < 5; i++) {
         document.getElementById('result').innerHTML = xmlHttp.response._total;
-        document.getElementById('img' + i).src = xmlHttp.response.streams[i].preview.medium;
+        document.getElementById('currentPage').innerHTML = pageNumber;
+        document.getElementById('totalPages').innerHTML = '/' + totalPages;        
         document.getElementById('img' + i).style = 'display:inline';
+        document.getElementById('img' + i).src = xmlHttp.response.streams[i].preview.medium;
         document.getElementById('link' + i).href = xmlHttp.response.streams[i].channel.url;
         document.getElementById('id'  + i).innerHTML = xmlHttp.response.streams[i].channel.display_name;
         document.getElementById('gameName' + i).innerHTML = xmlHttp.response.streams[i].game;
