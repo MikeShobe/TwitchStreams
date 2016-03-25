@@ -7,6 +7,10 @@ h2 {
   text-decoration: underline;
 }
 
+h4{
+  display: inline;
+  text-align: center;
+}
 header {
   height: 125px;
   width: 700px;
@@ -42,4 +46,8 @@ img {
 
 #result {
   display: inline;
+}
+
+#streams {
+  list-style-type: none;
 }
