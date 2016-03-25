@@ -1,5 +1,5 @@
 var xmlHttp = new XMLHttpRequest();
-var query;
+// var query = document.getElementById('searchInput').value || 'starcraft';
 
 xmlHttp.open('GET', encodeURI('https://api.twitch.tv/kraken/search/streams?q=starcraft'));
 xmlHttp.responseType = 'json';
@@ -16,8 +16,17 @@ xmlHttp.onload = function() {
 
   }
   else {
-    alert('Request failed.  Returned status of ' + xmlHttp.status);
+    alert('Request failed. Status code: ' + xmlHttp.status);
   }
 };
+
+function changeQuery(){
+  // query = document.getElementById('searchInput').value;
+  // query = document.getElementById('searchInput').getAttribute('onclick');
+  // xmlHttp.open('GET', encodeURI('https://api.twitch.tv/kraken/search/streams?q=' + query));
+  // xmlHttp.send();
+  alert(document.getElementById('searchInput').value);
+
+}
 
 xmlHttp.send();

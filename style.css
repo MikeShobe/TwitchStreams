@@ -5,12 +5,14 @@ h1 {
 h2 {
   display: inline;
   text-decoration: underline;
+  padding: 20px;
 }
 
 h4{
   display: inline;
   text-align: center;
 }
+
 header {
   height: 125px;
   width: 700px;
@@ -22,6 +24,8 @@ img {
   height: 100px;
   width: 110px;
   display: inline;
+  float: left;
+  margin-right: 5px;
 }
 
 #search {
@@ -50,4 +54,10 @@ img {
 
 #streams {
   list-style-type: none;
+  float: left;
+  display: inline;
+}
+
+.streamItem {
+  padding-bottom: 5px;
 }
