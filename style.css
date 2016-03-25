@@ -52,6 +52,11 @@ img {
   display: inline;
 }
 
+#pages {
+  float: right;
+  margin-right: 30px;
+}
+
 #streams {
   list-style-type: none;
   float: left;
