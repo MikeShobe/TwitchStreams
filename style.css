@@ -41,19 +41,32 @@ img {
 
 #resultContainer {
   height: 20px;
-  width: 700px;
-  margin: 0 auto;
   text-align: left;
-  padding: 5px 15px;
+  padding: 0 15px;
+  display: inline;
+  line-height: 2;
 }
 
 #result {
   display: inline;
 }
 
-#pages {
+#pageContainer {
+  display: inline;
   float: right;
-  margin-right: 30px;
+  line-height: 2;
+  text-align: center;
+}
+
+#currentPage {
+  display: inline;
+  float: right;
+}
+
+#totalPages {
+  display: inline;
+  float: right;
+  padding-right: 30px;
 }
 
 #streams {
@@ -68,13 +81,16 @@ img {
   margin-bottom: 13px;
 }
 
-#currentPage {
-  display: inline;
+button {
+  display:inline;
   float: right;
+  margin-top: 5px;
 }
 
-#totalPages {
-  display: inline;
-  float: right;
-  padding-right: 30px;
+/*#leftButton {
+  margin:2px 15px 0 0;
 }
+
+#rightButton {
+  margin: 2px 5px -5px 0;
+}*/
