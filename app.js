@@ -13,8 +13,7 @@ function changeQuery(){
     if (xmlHttp.status === 200){
       for (var i = 0; i < 5; i++) {
         document.getElementById('result').innerHTML = results;
-        document.getElementById('currentPage').innerHTML = pageNumber;
-        document.getElementById('totalPages').innerHTML = '/' + totalPages;
+        document.getElementById('pages').innerHTML = pageNumber + '/' + totalPages;
         document.getElementById('leftButton').style = 'display:inline';
         document.getElementById('rightButton').style = 'display:inline';
         document.getElementById('img' + i).style = 'display:inline';

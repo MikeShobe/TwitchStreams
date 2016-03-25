@@ -58,15 +58,8 @@ img {
   text-align: center;
 }
 
-#currentPage {
-  display: inline;
-  float: right;
-}
-
-#totalPages {
-  display: inline;
-  float: right;
-  padding-right: 30px;
+#pages {
+  margin: 0 10px;
 }
 
 #streams {
@@ -89,8 +82,8 @@ button {
 
 /*#leftButton {
   margin:2px 15px 0 0;
-}
+}*/
 
 #rightButton {
-  margin: 2px 5px -5px 0;
-}*/
+  margin-right: 15px;
+}
