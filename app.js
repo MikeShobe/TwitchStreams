@@ -12,6 +12,7 @@ function changeQuery(){
       for (var i = 0; i < 5; i++) {
         document.getElementById('result').innerHTML = xmlHttp.response._total;
         document.getElementById('img' + i).src = xmlHttp.response.streams[i].preview.medium;
+        document.getElementById('img' + i).style = 'display:inline';
         document.getElementById('link' + i).href = xmlHttp.response.streams[i].channel.url;
         document.getElementById('id'  + i).innerHTML = xmlHttp.response.streams[i].channel.display_name;
         document.getElementById('gameName' + i).innerHTML = xmlHttp.response.streams[i].game;
