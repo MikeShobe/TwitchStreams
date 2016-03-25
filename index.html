@@ -9,10 +9,10 @@
 
   <header>
     <h1>Twitch Streams</h1>
-    <form id="search">
-      <input type="search" name="twitchSearch" placeholder="Search query..."
-       id="searchInput" >
-      <input type="submit" value="submit" onclick="changeQuery()">
+    <form id="search" method="GET">
+      <input type="text" name="query" placeholder="Search query..."
+       id="searchInput" autofocus required>
+      <input type="submit" value="submit" name="submit" onclick="changeQuery()">
     </form>
   </header>
 
@@ -48,5 +48,4 @@
   </div>
 </body>
 <script type="text/javascript" src="app.js"></script>  
-<script type="text/javascript" src="changeQuery.js"></script>
 </html>
