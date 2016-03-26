@@ -6,12 +6,18 @@ h1 {
 h2 {
   display: inline;
   text-decoration: underline;
-  padding: 20px;
+  margin-left: -5px;
 }
 
 h4{
   display: inline;
   text-align: center;
+  color: black;
+}
+
+p {
+  color: black;
+  margin-top: 3px;
 }
 
 a {
@@ -31,7 +37,7 @@ img {
   width: 110px;
   display: inline;
   float: left;
-  margin-right: 10px;
+  margin-right: 30px;
 }
 
 #search {
@@ -80,12 +86,13 @@ img {
   list-style-type: none;
   float: left;
   display: inline;
+  padding-left: 30px;
 }
 
 .streamItem {
   padding-bottom: 5px;
   width: 650px;
-  margin-bottom: 13px;
+  margin-bottom: 25px;
 }
 
 button {
