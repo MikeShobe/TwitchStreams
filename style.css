@@ -67,12 +67,12 @@ button:hover {
 
 
 #search {
-  text-align: center;
-  margin: 10px;
+  text-align: left;
+  margin: 20px;
 }
 
 #searchInput {
-  width: 300px;
+  width: 275px;
   height: 25px;
 }
 
