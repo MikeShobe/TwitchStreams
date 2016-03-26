@@ -65,6 +65,7 @@ button:hover {
 
 #searchInput {
   width: 290px;
+  border-radius: 2px;
 }
 
 #searchInput:hover {
