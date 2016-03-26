@@ -5,7 +5,8 @@ function changeQuery(inputQuery){
   var xmlHttp = new XMLHttpRequest();
   var query = inputQuery || document.getElementById('searchInput').value;
   var url = 'https://api.twitch.tv/kraken/search/streams?q=' + query;
-  currentQuery = query;
+
+  currentQuery = query; // keeps track of current search query. NOTE: Possibly display for user?
 
   xmlHttp.open('GET', url, true);
   xmlHttp.responseType = 'json';
@@ -21,16 +22,17 @@ function changeQuery(inputQuery){
     var pageLoad = 5 * pageNumber;
 
     if (xmlHttp.status === 200){
+    //loop allows to add larger indexed streams get rendered to the same five elements
       for (var i = pageLoad - 5, elementNum = 0; i < pageLoad; i++, elementNum++) {
         document.getElementById('result').innerHTML = results;
         document.getElementById('pages').innerHTML = pageNumber + '/' + totalPages;
         document.getElementById('leftButton').style = 'display:inline';
         document.getElementById('rightButton').style = 'display:inline';
 
-        //dynamic 'stream' items
+      //creates dynamic streamItems
         if (i < results){
 
-          //makes proper elements visible if they were invisible from default or page turn
+        //makes proper elements visible if they were invisible from default or page turn
           document.getElementById('img' + elementNum).style = 'display:inline';
           document.getElementById('id' + elementNum).style = 'display:inline';
           document.getElementById('gameName' + elementNum).style = 'display:inline';
@@ -47,7 +49,7 @@ function changeQuery(inputQuery){
           document.getElementById('description' + elementNum).innerHTML = xmlHttp.response.streams[i].channel.status.substring(0,71) + ' ...';
         }
 
-        //remove left-over stream items from previous page
+      //remove left-over streamItems from previous page
         else {
           document.getElementById('img' + elementNum).style = 'display:none';
           document.getElementById('link' + elementNum).style = 'display:none';
@@ -59,9 +61,10 @@ function changeQuery(inputQuery){
       }
     }
     else {
-      alert('Request failed. Status code: ' + xmlHttp.status);      
+      console.error('Request failed. Status code: ' + xmlHttp.status);      
     }
   }
+  
   //sends API data to front-end and clears the search form
     xmlHttp.send();
     document.getElementById("search").reset();
