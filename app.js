@@ -1,10 +1,10 @@
 var pageNumber = 1;
 var currentQuery;
 
-function changeQuery(inputQuery) {
+function changeQuery(currQuery) {
   var xmlHttp = new XMLHttpRequest();
-  var query = inputQuery || document.getElementById('searchInput').value;
-  var url = 'https://api.twitch.tv/kraken/search/streams?q=' + query;
+  var query = currQuery || document.getElementById('searchInput').value;
+  var url = 'https://api.twitch.tv/kraken/search/streams?q=' + query; //query for API request
 
   currentQuery = query; // keeps track of current search query & gets displayed as red text
 
@@ -12,7 +12,7 @@ function changeQuery(inputQuery) {
   xmlHttp.responseType = 'json';
 
 //resets to first page if inputting new query from later page
-  if (!inputQuery && pageNumber === 2){
+  if (!currQuery && pageNumber === 2){
     pageNumber = 1;
   }
 
@@ -57,6 +57,7 @@ function changeQuery(inputQuery) {
 
 //takes in data from API request and changeQuery function to populate page
 function renderStreamItems(elementNum, results, totalPages, data, index) {
+
   //makes proper elements visible if they were invisible from default or page turn
     document.getElementById('img' + elementNum).style = 'display:inline';
     document.getElementById('id' + elementNum).style = 'display:inline';
@@ -65,7 +66,7 @@ function renderStreamItems(elementNum, results, totalPages, data, index) {
     document.getElementById('description' + elementNum).style = 'display:block';
     document.getElementById('link' + elementNum).style = 'display:block';
 
-  //interface that only appears if input is valid
+  //interface that will appear because there were results
     document.getElementById('result').innerHTML = results;
     document.getElementById('result').style = 'display:inline';
     document.getElementById('pages').style = 'display:inline';          
@@ -73,7 +74,7 @@ function renderStreamItems(elementNum, results, totalPages, data, index) {
     document.getElementById('leftButton').style = 'display:inline';
     document.getElementById('rightButton').style = 'display:inline';
 
-  //builds stream items dynamically
+  //builds stream items dynamically from the loop in changeQuery
     document.getElementById('img' + elementNum).src = data.streams[index].preview.medium;
     document.getElementById('link' + elementNum).href = data.streams[index].channel.url;
     document.getElementById('id'  + elementNum).innerHTML = data.streams[index].channel.display_name;
