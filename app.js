@@ -1,5 +1,6 @@
 var pageNumber = 1;
 var currentQuery;
+var results;
 
 function changeQuery(currQuery) {
   var xmlHttp = new XMLHttpRequest();
@@ -17,7 +18,7 @@ function changeQuery(currQuery) {
   }
 
   xmlHttp.onload = function(){
-    var results = xmlHttp.response.streams.length;
+    results = xmlHttp.response.streams.length;
     var totalPages = Math.ceil(results / 5);
     var pageLoad = 5 * pageNumber;
 
@@ -103,7 +104,7 @@ function removeStreamItems(elementNum){
 
 //loads the next page of streams if rightButton is clicked
 function nextPage(){
-  if (pageNumber === 1){
+  if (pageNumber === 1 && results !== 5){
     pageNumber++;
     changeQuery(currentQuery);    
   }
