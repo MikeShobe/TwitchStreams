@@ -104,7 +104,7 @@ function removeStreamItems(elementNum){
 
 //loads the next page of streams if rightButton is clicked
 function nextPage(){
-  if (pageNumber === 1 && results !== 5){
+  if (pageNumber === 1 && results > 5){
     pageNumber++;
     changeQuery(currentQuery);    
   }
