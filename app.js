@@ -6,7 +6,7 @@ function changeQuery(inputQuery){
   var query = inputQuery || document.getElementById('searchInput').value;
   var url = 'https://api.twitch.tv/kraken/search/streams?q=' + query;
 
-  currentQuery = query; // keeps track of current search query. NOTE: Possibly display for user?
+  currentQuery = query; // keeps track of current search query & gets displayed as red text
 
   xmlHttp.open('GET', url, true);
   xmlHttp.responseType = 'json';
@@ -24,10 +24,7 @@ function changeQuery(inputQuery){
     if (xmlHttp.status === 200){
     //loop allows to add larger indexed streams get rendered to the same five elements
       for (var i = pageLoad - 5, elementNum = 0; i < pageLoad; i++, elementNum++) {
-        document.getElementById('result').innerHTML = results;
-        document.getElementById('pages').innerHTML = pageNumber + '/' + totalPages;
-        document.getElementById('leftButton').style = 'display:inline';
-        document.getElementById('rightButton').style = 'display:inline';
+        document.getElementById('currentQuery').innerHTML = currentQuery;
 
       //creates dynamic streamItems
         if (i < results){
@@ -39,6 +36,12 @@ function changeQuery(inputQuery){
           document.getElementById('viewers' + elementNum).style = 'display:inline';
           document.getElementById('description' + elementNum).style = 'display:block';
           document.getElementById('link' + elementNum).style = 'display:block';
+
+        //interface that only appears if input is valid
+          document.getElementById('result').innerHTML = results;
+          document.getElementById('pages').innerHTML = pageNumber + '/' + totalPages;
+          document.getElementById('leftButton').style = 'display:inline';
+          document.getElementById('rightButton').style = 'display:inline';
 
         //builds stream items dynamically
           document.getElementById('img' + elementNum).src = xmlHttp.response.streams[i].preview.medium;
@@ -64,7 +67,7 @@ function changeQuery(inputQuery){
       console.error('Request failed. Status code: ' + xmlHttp.status);      
     }
   }
-  
+
   //sends API data to front-end and clears the search form
     xmlHttp.send();
     document.getElementById("search").reset();

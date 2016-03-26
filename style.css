@@ -13,10 +13,15 @@ h4{
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
   height: 125px;
   width: 700px;
   border: 1px solid black;
+  border-bottom: 0;
   margin: 0 auto;
 }
 
@@ -30,6 +35,14 @@ img {
 
 #search {
   text-align: center;
+  position: fixed;
+  margin: 13px;
+}
+
+#currentQuery{
+  float: right;
+  margin: 13px;
+  color: crimson;
 }
 
 #container {
@@ -80,10 +93,6 @@ button {
   margin-top: 5px;
 }
 
-/*#leftButton {
-  margin:2px 15px 0 0;
-}*/
-
 #rightButton {
-  margin-right: 15px;
+  margin-right: -20px;
 }
