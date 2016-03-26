@@ -69,17 +69,13 @@ button:hover {
 #search {
   text-align: left;
   margin: 20px;
-  height: 25px;
 }
 
 #searchInput {
-  width: 275px;
-  height: 25px;
+  width: 290px;
 }
 
 #submit {
-  height: 25px;
-  padding: 0 15px;
   position: absolute;
   margin-left: 5px;
 }
