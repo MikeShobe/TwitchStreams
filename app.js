@@ -58,7 +58,7 @@ function changeQuery(inputQuery){
           document.getElementById('id'  + elementNum).innerHTML = xmlHttp.response.streams[i].channel.display_name;
           document.getElementById('gameName' + elementNum).innerHTML = xmlHttp.response.streams[i].game || 'GAME NOT SPECIFIED';
           document.getElementById('viewers' + elementNum).innerHTML = '- ' + xmlHttp.response.streams[i].viewers + ' viewers';
-          document.getElementById('description' + elementNum).innerHTML = xmlHttp.response.streams[i].channel.status.substring(0,72) + ' ...';
+          document.getElementById('description' + elementNum).innerHTML = xmlHttp.response.streams[i].channel.status.substring(0,71) + ' ...';
         }
 
       //remove left-over streamItems from previous page

@@ -1,6 +1,10 @@
 h1 {
   text-align: center;
-  color: #6441a5;
+  text-decoration: none;
+}
+
+h1:hover {
+  opacity: 0.7;
 }
 
 h2 {
@@ -40,23 +44,32 @@ img {
   margin-right: 30px;
 }
 
+#container {
+  height: 625px;
+  width: 700px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
 #search {
   text-align: center;
   position: fixed;
-  margin: 13px;
+  margin: 10px;
+}
+
+#searchInput {
+  width: 300px;
+  line-height: 1.5;
+}
+
+#submit {
+  height: 25px;
 }
 
 #currentQuery{
   float: right;
   margin: 13px 13px 0 0;
   color: crimson;
-}
-
-#container {
-  height: 625px;
-  width: 700px;
-  border: 1px solid black;
-  margin: 0 auto;
 }
 
 #resultContainer {
@@ -95,12 +108,33 @@ img {
   margin-bottom: 25px;
 }
 
+.streamItem:hover {
+  opacity: 0.7;
+}
+
 button {
   display:inline;
   float: right;
   margin-top: 5px;
 }
 
+button:hover {
+  background-color: azure;
+}
+
+
 #rightButton {
   margin-right: 15px;
+}
+
+input {
+
+}
+
+input:focus{
+  background-color: azure;
+}
+
+input:hover {
+  background-color: azure;
 }
