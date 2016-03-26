@@ -21,6 +21,13 @@ function changeQuery(inputQuery){
     var totalPages = Math.ceil(results / 5);
     var pageLoad = 5 * pageNumber;
 
+    if (!results) {
+      document.getElementById('result').innerHTML = 0;
+      document.getElementById('pages').style = 'display:none'; 
+      document.getElementById('leftButton').style = 'display:none';
+      document.getElementById('rightButton').style = 'display:none';      
+    }
+
     if (xmlHttp.status === 200){
     //loop allows to add larger indexed streams get rendered to the same five elements
       for (var i = pageLoad - 5, elementNum = 0; i < pageLoad; i++, elementNum++) {
@@ -39,6 +46,8 @@ function changeQuery(inputQuery){
 
         //interface that only appears if input is valid
           document.getElementById('result').innerHTML = results;
+          document.getElementById('result').style = 'display:inline';
+          document.getElementById('pages').style = 'display:inline';          
           document.getElementById('pages').innerHTML = pageNumber + '/' + totalPages;
           document.getElementById('leftButton').style = 'display:inline';
           document.getElementById('rightButton').style = 'display:inline';
