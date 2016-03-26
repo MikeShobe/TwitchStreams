@@ -89,7 +89,7 @@ function renderStreamItems(elementNum, results, totalPages, data, index) {
     document.getElementById('id'  + elementNum).innerHTML = data.streams[index].channel.display_name;
     document.getElementById('gameName' + elementNum).innerHTML = data.streams[index].game || 'GAME NOT SPECIFIED';
     document.getElementById('viewers' + elementNum).innerHTML = '- ' + data.streams[index].viewers + ' viewers';
-    document.getElementById('description' + elementNum).innerHTML = data.streams[index].channel.status.substring(0,60) + ' ...';  
+    document.getElementById('description' + elementNum).innerHTML = data.streams[index].channel.status.substring(0,53) + ' ...';  
 }
 
 // clears display if no results
