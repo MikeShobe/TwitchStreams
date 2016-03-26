@@ -24,7 +24,7 @@ h2 {
   margin-left: -5px;
 }
 
-h4{
+h4 {
   display: inline;
   text-align: center;
   color: black;
@@ -43,14 +43,6 @@ img {
   margin-right: 30px;
 }
 
-input:focus{
-  background-color: azure;
-}
-
-input:hover {
-  background-color: azure;
-}
-
 button {
   display:inline;
   float: right;
@@ -58,7 +50,7 @@ button {
 }
 
 button:hover {
-  background-color: azure;
+  opacity: 0.5;
 }
 
 #rightButton {
@@ -75,11 +67,23 @@ button:hover {
   width: 290px;
 }
 
+#searchInput:hover {
+  background-color: azure;
+}
+
+#searchInput:focus {
+  background-color: azure;
+}
+
+
 #submit {
   position: absolute;
   margin-left: 5px;
 }
 
+#submit:hover {
+  opacity: 0.5;
+}
 
 #currentQuery{
   float: right;
