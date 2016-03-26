@@ -1,1 +1,91 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Twitch Streams</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="app.js"></script>  
+</head>
+
+<body>
+  <header>
+    <h1><a href="https://www.twitch.tv/">Twitch Streams</a></h1>
+    <h3 id="currentQuery"></h3>
+    <form id="search" onsubmit="return changeQuery()">
+      <input id="searchInput" type="search" name="query" placeholder="Search query..."
+        maxlength="25" autofocus required>
+      <input id="submit" type="submit" value="Search" name="submit">
+    </form>
+  </header>
+
+  <div id="container">
+    <div id="resultContainer">Total results:
+      <div id="result"></div>
+    </div>
+
+    <button id="rightButton" style="display:none" onclick="nextPage()"> → </button>
+    <div id="pageContainer">
+      <div id="pages"></div>
+    </div>
+    <button id="leftButton" style="display:none" onclick="lastPage()"> ← </button>
+
+    <ul id="streams">
+      <li class="streamItem">
+        <a id="link0" href="/">
+          <img id="img0" src="/" alt="no preview image" style="display:none">
+          <h2 id="id0"></h2>
+          <br>
+          <h4 id="gameName0"></h4>
+          <h4 id="viewers0"></h4>
+          <p id="description0"></p>
+        </a>
+      </li>  
+
+      <li class="streamItem">
+        <a id ="link1" href="/">
+          <img id ="img1" src="/" alt="no preview image" style="display:none">
+          <h2 id="id1"></h2>
+          <br>
+          <h4 id="gameName1"></h4>
+          <h4 id="viewers1"></h4>
+          <p id="description1"></p>
+        </a>
+      </li>  
+
+      <li class="streamItem">
+        <a id ="link2" href="/">
+          <img id ="img2" src="/" alt="no preview image" style="display:none">
+          <h2 id="id2"></h2>
+          <br>
+          <h4 id="gameName2"></h4>
+          <h4 id="viewers2"></h4>
+          <p id="description2"></p>
+        </a>
+      </li>  
+
+      <li class="streamItem">
+        <a id ="link3" href="/">
+          <img id ="img3" src="/" alt="no preview image" style="display:none">
+          <h2 id="id3"></h2>
+          <br>
+          <h4 id="gameName3"></h4>
+          <h4 id="viewers3"></h4>
+          <p id="description3"></p>
+        </a>
+      </li>  
+
+      <li class="streamItem">
+        <a id ="link4" href="/">
+          <img id ="img4" src="/" alt="no preview image" style="display:none">
+          <h2 id="id4"></h2>
+          <br>
+          <h4 id="gameName4"></h4>
+          <h4 id="viewers4"></h4>
+          <p id="description4"></p>
+        </a>
+      </li>  
+    </ul>
+
+  </div>
+</body>
+</html>
