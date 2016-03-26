@@ -31,6 +31,14 @@ function changeQuery(currQuery) {
     //loop allows for streams index 5+ to get rendered to the same five original elements
       for (var i = pageLoad - 5, elementNum = 0; i < pageLoad; i++, elementNum++) {
         document.getElementById('currentQuery').innerHTML = currentQuery;
+        
+      //handles the size of the displayed query string
+        if (query.length > 12){
+          document.getElementById('currentQuery').style = 'font-size: 15px; line-height:1.7';
+        }
+        else {
+          document.getElementById('currentQuery').style = 'font-size: 24px; line-height:1';    
+        }
 
       //creates dynamic streamItems
         if (i < results){

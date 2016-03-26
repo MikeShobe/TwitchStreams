@@ -86,9 +86,9 @@ button:hover {
 
 #currentQuery{
   float: right;
-  margin: 0 20px 20px 0;
+  margin: 0 20px 0 0;
   color: crimson;
-  overflow: hidden;
+  font-size: 24px;
 }
 
 #container {
