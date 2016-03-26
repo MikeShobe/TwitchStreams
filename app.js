@@ -10,9 +10,10 @@ function changeQuery(inputQuery){
   xmlHttp.open('GET', url, true);
   xmlHttp.responseType = 'json';
 
-  // if (currentQuery && pageNumber === 2){
-  //   pageNumber = 1;
-  // }
+//resets to first page if inputting new query from later page
+  if (!inputQuery && pageNumber === 2){
+    pageNumber = 1;
+  }
 
   xmlHttp.onload = function(){
     var results = xmlHttp.response.streams.length;
@@ -45,6 +46,7 @@ function changeQuery(inputQuery){
           document.getElementById('viewers' + elementNum).innerHTML = '- ' + xmlHttp.response.streams[i].viewers + ' viewers';
           document.getElementById('description' + elementNum).innerHTML = xmlHttp.response.streams[i].channel.status.substring(0,71) + ' ...';
         }
+
         //remove left-over stream items from previous page
         else {
           document.getElementById('img' + elementNum).style = 'display:none';
@@ -65,7 +67,7 @@ function changeQuery(inputQuery){
     document.getElementById("search").reset();
 }
 
-//loads the next page of streams
+//loads the next page of streams if rightButton is clicked
 function nextPage(){
   if (pageNumber === 1){
     pageNumber++;
@@ -73,9 +75,9 @@ function nextPage(){
   }
 }
 
-//loads the previous page of streams
+//loads the previous page of streams if leftButton is clicked
 function lastPage(){
-  if (pageNumber > 1){
+  if (pageNumber === 2){
     pageNumber--;
     changeQuery(currentQuery);
   }
