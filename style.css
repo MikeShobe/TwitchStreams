@@ -1,6 +1,17 @@
+a {
+  text-decoration: none;
+}
+
+header {
+  height: 125px;
+  width: 700px;
+  border: 1px solid black;
+  border-bottom: 0;
+  margin: 0 auto;
+}
+
 h1 {
   text-align: center;
-  text-decoration: none;
 }
 
 h1:hover {
@@ -24,18 +35,6 @@ p {
   margin-top: 3px;
 }
 
-a {
-  text-decoration: none;
-}
-
-header {
-  height: 125px;
-  width: 700px;
-  border: 1px solid black;
-  border-bottom: 0;
-  margin: 0 auto;
-}
-
 img {
   height: 100px;
   width: 110px;
@@ -44,12 +43,28 @@ img {
   margin-right: 30px;
 }
 
-#container {
-  height: 625px;
-  width: 700px;
-  border: 1px solid black;
-  margin: 0 auto;
+input:focus{
+  background-color: azure;
 }
+
+input:hover {
+  background-color: azure;
+}
+
+button {
+  display:inline;
+  float: right;
+  margin-top: 5px;
+}
+
+button:hover {
+  background-color: azure;
+}
+
+#rightButton {
+  margin-right: 15px;
+}
+
 
 #search {
   text-align: center;
@@ -59,22 +74,30 @@ img {
 
 #searchInput {
   width: 300px;
-  line-height: 1.5;
+  height: 25px;
 }
 
 #submit {
   height: 25px;
+  padding: 0 15px;
 }
+
 
 #currentQuery{
   float: right;
   margin: 13px 13px 0 0;
   color: crimson;
+  overflow: hidden;
+}
+
+#container {
+  height: 625px;
+  width: 700px;
+  border: 1px solid black;
+  margin: 0 auto;
 }
 
 #resultContainer {
-  height: 20px;
-  text-align: left;
   padding: 0 15px;
   display: inline;
   line-height: 2;
@@ -83,6 +106,7 @@ img {
 #result {
   display: inline;
 }
+
 
 #pageContainer {
   display: inline;
@@ -95,10 +119,10 @@ img {
   margin: 0 10px;
 }
 
+
 #streams {
   list-style-type: none;
   float: left;
-  display: inline;
   padding-left: 30px;
 }
 
@@ -112,29 +136,4 @@ img {
   opacity: 0.7;
 }
 
-button {
-  display:inline;
-  float: right;
-  margin-top: 5px;
-}
 
-button:hover {
-  background-color: azure;
-}
-
-
-#rightButton {
-  margin-right: 15px;
-}
-
-input {
-
-}
-
-input:focus{
-  background-color: azure;
-}
-
-input:hover {
-  background-color: azure;
-}

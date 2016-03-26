@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title id="twitchStreams">Twitch Streams</title>
+  <title>Twitch Streams</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <script type="text/javascript" src="app.js"></script>  
-
 </head>
 
 <body>
@@ -15,7 +14,7 @@
     <form id="search" onsubmit="return changeQuery()">
       <input id="searchInput" type="search" name="query" placeholder="Search query..."
         maxlength="25" autofocus required>
-      <input id="submit" type="submit" value="submit" name="submit">
+      <input id="submit" type="submit" value="Search" name="submit">
     </form>
   </header>
 
@@ -31,7 +30,6 @@
     <button id="leftButton" style="display:none" onclick="lastPage()"> ← </button>
 
     <ul id="streams">
-
       <li class="streamItem">
         <a id="link0" href="/">
           <img id="img0" src="/" alt="no preview image" style="display:none">
@@ -86,7 +84,6 @@
           <p id="description4"></p>
         </a>
       </li>  
-
     </ul>
 
   </div>
