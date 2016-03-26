@@ -4,16 +4,18 @@
   <meta charset="UTF-8">
   <title id="twitchStreams">Twitch Streams</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="app.js"></script>  
+
 </head>
 
 <body>
   <header>
     <h1><a href="https://www.twitch.tv/">Twitch Streams</a></h1>
     <h3 id="currentQuery"></h3>
-    <form id="search" method="GET">
-      <input id="searchInput"type="text" name="query" placeholder="Search query..."
-        autofocus required maxlength="25">
-      <input id="submit" type="submit" value="submit" name="submit" onclick="changeQuery()">
+    <form id="search" onsubmit="return changeQuery()">
+      <input id="searchInput" type="search" name="query" placeholder="Search query..."
+        maxlength="25" autofocus required>
+      <input id="submit" type="submit" value="submit" name="submit">
     </form>
   </header>
 
@@ -89,5 +91,4 @@
 
   </div>
 </body>
-<script type="text/javascript" src="app.js"></script>  
 </html>
