@@ -79,12 +79,14 @@ button:hover {
 #submit {
   height: 25px;
   padding: 0 15px;
+  position: absolute;
+  margin-left: 5px;
 }
 
 
 #currentQuery{
   float: right;
-  margin: 13px 13px 0 0;
+  margin: 0 20px 20px 0;
   color: crimson;
   overflow: hidden;
 }
